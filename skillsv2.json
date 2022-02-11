@@ -256,11 +256,11 @@
   ],
   "cognitiveServices": {
     "@odata.type": "#Microsoft.Azure.Search.CognitiveServicesByKey",
-    "description": "/subscriptions/d81c23b7-62fa-4c63-a451-9a91fc67ba07/resourceGroups/RG-D-DO-RD-PROTOTYPE/providers/Microsoft.CognitiveServices/accounts/cs-ptype",
-    "key": "ef12f426776540f98741303ef389983d"
+    "description": "",
+    "key": ""
   },
   "knowledgeStore": {
-    "storageConnectionString": "DefaultEndpointsProtocol=https;AccountName=saddordptypeblob;AccountKey=j3ZvslbnefUvIZaGtAPs+6iU5ne47Aib7fQoT4dwt0poD8P3riacJxCw/RqD5iimKDpm1UcOxr01wuXZIGVIAw==;EndpointSuffix=core.windows.net",
+    "storageConnectionString": "",
     "projections": [
       {
         "tables": [
@@ -333,7 +333,7 @@
             "sourceContext": "/document/tableprojection/sentences/*/organizations/*",
             "inputs": [
               {
-                "name": "people",
+                "name": "organizations",
                 "source": "/document/tableprojection/sentences/*/organizations/*",
                 "sourceContext": null,
                 "inputs": []
@@ -350,6 +350,12 @@
               {
                 "name": "pii",
                 "source": "/document/tableprojection/sentences/*/pii_entities/*",
+                "sourceContext": null,
+                "inputs": []
+              },
+              {
+                "name": "pii_text",
+                "source": "/document/tableprojection/sentences/*/pii_entities/*/text",
                 "sourceContext": null,
                 "inputs": []
               }
